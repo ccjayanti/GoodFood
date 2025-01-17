@@ -15,7 +15,7 @@ export default function What() {
         <div className="uppercase  text-xs py-5">
           Curated Culinary Experiences
         </div>
-        <div className="font-regular ">
+        <div className="font-regular text-xl">
           We specialize in crafting{" "}
           <span className="font-italic">personalized dining</span> experiences
           that cater to your tastes, preferences, and occasions. From intimate
@@ -46,7 +46,7 @@ export default function What() {
       </div>
       <div className="relative py-7">
         <div className="text-xs uppercase px-5 mt-7">Seamless Service</div>
-        <div className="font-regular px-5 mt-2">
+        <div className="font-regular px-5 mt-2 text-xl">
           Our goal is to make your event effortless and enjoyable. From sourcing
           fresh, high-quality ingredients to delivering flawless table service,
           we handle every aspect so you can focus on your guests.We accommodate

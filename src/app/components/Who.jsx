@@ -15,7 +15,7 @@ export default function Who() {
         <div className="uppercase  text-xs py-5">
           a passionate Culinary service
         </div>
-        <div className="font-regular ">
+        <div className="font-regular text-xl ">
           We are a dedicated team of culinary professionals with years of
           experience in the art of fine dining. Our mission is to bring{" "}
           <span className="font-italic">expertise, precision</span>, and{" "}
@@ -49,7 +49,7 @@ export default function Who() {
         <div className="text-xs uppercase px-5 mt-7">
           A Foundation of Expertise
         </div>
-        <div className="font-regular px-5 mt-2">
+        <div className="font-regular px-5 mt-2 text-xl">
           With years of hands-on experience in{" "}
           <span className="font-italic">fine dining</span> and professional
           kitchens, we have honed our craft to blend artistry with precision.

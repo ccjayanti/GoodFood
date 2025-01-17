@@ -11,7 +11,7 @@ export default function Connect() {
           Connect
         </div>
       </div>
-      <div className="font-regular text-sm">
+      <div className="font-regular text-xl">
         We would love to hear from you! Whether you are planning a special
         celebration or simply looking to enjoy an unforgettable dining
         experience, we are here to help. Reach out to us via phone, email, or
@@ -45,7 +45,7 @@ export default function Connect() {
       <div className="my-9 ">
         <div className="text-xs uppercase mt-3 ">info</div>
         <div className="font-regular text-xl mt-3">Goodfood</div>
-        <div className="font-regular tex-xl">Privacy Policy </div>
+        <div className="font-regular text-xl">Privacy Policy </div>
       </div>
     </div>
   );

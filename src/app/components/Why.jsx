@@ -23,7 +23,7 @@ export default function Why() {
         <div className="uppercase  text-xs py-5">
           Tailored Culinary Experience
         </div>
-        <div className="font-regular ">
+        <div className="font-regular text-xl">
           We craft every meal to suit your{" "}
           <span className="font-italic">taste preferences, dietary needs,</span>{" "}
           and <span className="font-italic">event style</span> ensuring a dining
@@ -52,7 +52,7 @@ export default function Why() {
         <div className="text-xs uppercase px-5 mt-7">
           Commitment to Excellence
         </div>
-        <div className="font-regular px-5 mt-2">
+        <div className="font-regular px-5 mt-2 text-xl">
           At Goodfood we pride ourselves on delivering not just food, but an{" "}
           <span className="font-italic">unforgettable experience</span> with
           touch of{" "}
