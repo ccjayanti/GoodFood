@@ -2,7 +2,7 @@ import Hero from "./components/Hero";
 import Why from "./components/Why";
 import Who from "./components/Who";
 import What from "./components/What";
-import Connect from "./components/connect";
+import Connect from "./components/Connect";
 
 export default function Home() {
   return (
