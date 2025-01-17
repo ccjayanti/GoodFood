@@ -1,15 +1,8 @@
 import Image from "next/image";
+
 export default function Who() {
   return (
-    <div className="relative text-mist">
-      <div className="h-80 w-full relative ">
-        <Image
-          src="https://ik.imagekit.io/0xcqzy/good-food/Delicious%20tomato%20nectarine%20....jpg?updatedAt=1736521058440"
-          alt="food image"
-          fill
-          className="object-cover"
-        />
-      </div>
+    <div className="relative text-mist ">
       <div className="px-5 py-5">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>
@@ -44,7 +37,7 @@ export default function Who() {
           />
         </div>
       </div>
-      <div className="relative h-80">
+      <div className="relative h-[80vh]">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/Chef%20at%20work.jpg?updatedAt=1736519548600"
           alt="food image"
@@ -77,6 +70,14 @@ export default function Who() {
             className="object-cover"
           />
         </div>
+      </div>
+      <div className="h-[80vh] w-full relative ">
+        <Image
+          src="https://ik.imagekit.io/0xcqzy/good-food/A%20dish%20from%20Warehouse%20London.jpg?updatedAt=1737130396157"
+          alt="food image"
+          fill
+          className="object-cover"
+        />
       </div>
     </div>
   );

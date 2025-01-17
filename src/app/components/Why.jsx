@@ -1,8 +1,9 @@
 import Image from "next/image";
+
 export default function Why() {
   return (
     <div className="relative text-clay mt-5">
-      <div className="h-80 w-full relative ">
+      <div className="h-[60vh] w-full relative ">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Chopping%20Vegetables.jpg?updatedAt=1736521956162"
           alt="food image"
@@ -39,7 +40,7 @@ export default function Why() {
           />
         </div>
       </div>
-      <div className="relative h-80">
+      <div className="relative h-[80vh]">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Papaya%20and%20blueberries%20salad.jpg?updatedAt=1736522097544"
           alt="food image"
@@ -69,6 +70,14 @@ export default function Why() {
             className="object-cover"
           />
         </div>
+      </div>
+      <div className="h-[80vh] w-full relative ">
+        <Image
+          src="https://ik.imagekit.io/0xcqzy/good-food/Delicious%20tomato%20nectarine%20....jpg?updatedAt=1736521058440"
+          alt="food image"
+          fill
+          className="object-cover"
+        />
       </div>
     </div>
   );

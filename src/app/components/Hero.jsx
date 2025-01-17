@@ -24,7 +24,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-screen max-w-screen relative object-cover">
+    <div className="h-[100vh] max-w-screen relative object-cover">
       {heroImg && (
         <Image
           src={heroImg}
