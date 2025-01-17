@@ -1,10 +1,14 @@
 import Hero from "./components/Hero";
+import Why from "./components/Why";
 
 export default function Home() {
   return (
     <div>
       <Hero></Hero>
-      <div>hello world</div>
+      <br></br>
+      <br></br>
+      <Why></Why>
+    
     </div>
   );
 }
