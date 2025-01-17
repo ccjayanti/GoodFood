@@ -38,7 +38,7 @@ export default function Hero() {
       <div className="absolute top-2 left-0 w-full h-full text-ivory flex flex-col items-center justify-between text-center">
         <div className="font-regular mt-5 text-9xl">GOOD</div>
         <p className=" mt-4 w-60 text-xs uppercase font-sans font-medium">
-          Albert Robert presents GoodFood, a personalized nutrition advisor and
+          chef avenue presents GoodFood, a personalized nutrition advisor and
           private chef service
         </p>
         <div className="font-regular text-9xl mt-5">FOOD</div>
