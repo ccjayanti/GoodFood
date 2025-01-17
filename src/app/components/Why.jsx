@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Why() {
   return (
-    <div className="relative text-clay">
+    <div className="relative text-clay mt-5">
       <div className="h-80 w-full relative ">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Chopping%20Vegetables.jpg?updatedAt=1736521956162"
