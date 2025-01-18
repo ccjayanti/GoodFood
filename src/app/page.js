@@ -8,6 +8,7 @@ import Why from "./components/Why";
 import Who from "./components/Who";
 import What from "./components/What";
 import Connect from "./components/Connect";
+import Nav from "./components/Nav";
 
 export default function Home() {
   //effect to implement smooth scrolling
@@ -21,6 +22,7 @@ export default function Home() {
   }, []);
   return (
     <div>
+      <Nav></Nav>
       <Hero></Hero>
       <Why></Why>
       <Who></Who>

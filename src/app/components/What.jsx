@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function What() {
   return (
-    <div className="relative text-sage mt-5">
+    <div className="relative text-sage mt-5" id="what">
       <div className="px-5 py-5">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>

@@ -1,6 +1,6 @@
 export default function Connect() {
   return (
-    <div className="relative text-sand mt-5 px-5 py-5">
+    <div className="relative text-sand mt-5 px-5 py-5" id="connect">
       <div className="">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>
