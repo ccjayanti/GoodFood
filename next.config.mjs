@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
+      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https', // Protocol of the domain (e.g., 'https')
