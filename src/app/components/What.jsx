@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Dishes from "./Dishes";
 
 export default function What() {
   return (
@@ -66,6 +67,7 @@ export default function What() {
           />
         </div>
       </div>
+      <Dishes></Dishes>
     </div>
   );
 }
