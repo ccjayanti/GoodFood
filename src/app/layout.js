@@ -1,3 +1,4 @@
+import Head from 'next/head'; // Import Head for adding custom head elements
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -20,7 +21,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${oranienbaum.variable} ${playfairDisplay.variable}`}>
+      <Head>
+        {/* Preload the fonts */}
+        <link
+          rel="preload"
+          href="/fonts/Oranienbaum-Regular.woff"
+          as="font"
+          type="font/woff"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/PlayfairDisplay-Italic.woff"
+          as="font"
+          type="font/woff"
+          crossorigin="anonymous"
+        />
+      </Head>
+      <body className={`${oranienbaum.variable} ${playfairDisplay.variable}`}>
         {children}
       </body>
     </html>

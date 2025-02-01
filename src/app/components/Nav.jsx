@@ -2,6 +2,13 @@
 import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
 
+const menuItems = [
+  { id: "why", chapter: "001", title: "one" },
+  { id: "who", chapter: "002", title: "two" },
+  { id: "what", chapter: "003", title: "three" },
+  { id: "connect", chapter: "004", title: "four" },
+];
+
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [viewportHeight, setViewportHeight] = useState(0);
@@ -43,78 +50,30 @@ export default function Nav() {
             className="uppercase"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu
           >
-            <ul className="flex flex-col space-y-4 items-center ">
-              <li className="text-sage font-regular text-8xl justify-center flex flex-col items-center">
-                <hr className="w-screen"></hr>
-                <div className="text-xs font-sans flex justify-between w-full px-5 py-3">
-                  <div>chapter</div>
-                  <div>001</div>
-                  <div>one</div>
-                </div>
-                <Link
-                  to="why"
-                  smooth={true}
-                  duration={500}
-                  onClick={toggleMenu}
-                  className=""
+            <ul className="flex flex-wrap justify-center items-center w-full h-full space-y-4 lg:space-y-0 lg:space-x-4">
+              {menuItems.map((item) => (
+                <li
+                  key={item.id}
+                  className="text-sage font-regular text-4xl sm:text-6xl lg:text-8xl w-full sm:w-auto flex-col justify-center items-center"
                 >
-                  why
-                </Link>
-              </li>
-
-              <li className="text-sage font-regular text-8xl justify-center flex flex-col items-center">
-                <hr className="w-screen"></hr>
-                <div className="text-xs font-sans flex justify-between w-full px-5 py-3">
-                  <div>chapter</div>
-                  <div>002</div>
-                  <div>two</div>
-                </div>
-                <Link
-                  to="who"
-                  smooth={true}
-                  duration={500}
-                  onClick={toggleMenu}
-                  offset={-viewportHeight / 2}
-                >
-                  who
-                </Link>
-              </li>
-
-              <li className="text-sage font-regular text-8xl justify-center flex flex-col items-center">
-                <hr className="w-screen"></hr>
-                <div className="text-xs font-sans flex justify-between w-full px-5 py-3">
-                  <div>chapter</div>
-                  <div>003</div>
-                  <div>three</div>
-                </div>
-                <Link
-                  to="what"
-                  smooth={true}
-                  duration={500}
-                  onClick={toggleMenu}
-                  offset={-viewportHeight / 2}
-                >
-                  what
-                </Link>
-              </li>
-
-              <li className="text-sage font-regular text-8xl justify-center flex flex-col items-center">
-                <hr className="w-screen"></hr>
-                <div className="text-xs font-sans flex justify-between w-full px-5 py-3">
-                  <div>chapter</div>
-                  <div>004</div>
-                  <div>four</div>
-                </div>
-                <Link
-                  to="connect"
-                  smooth={true}
-                  duration={500}
-                  onClick={toggleMenu}
-                  offset={-viewportHeight / 2}
-                >
-                  connect
-                </Link>
-              </li>
+                  <hr className="w-screen mb-4" />
+                  <div className="text-xs font-sans flex justify-between w-full px-5 py-3">
+                    <div>chapter</div>
+                    <div>{item.chapter}</div>
+                    <div>{item.title}</div>
+                  </div>
+                  <Link
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    onClick={toggleMenu}
+                    offset={-viewportHeight / 2}
+                    className="text-center"
+                  >
+                    {item.id}
+                  </Link>
+                </li>
+              ))}
             </ul>
             {/* Close Button */}
             <button
