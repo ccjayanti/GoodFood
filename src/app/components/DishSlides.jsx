@@ -15,6 +15,7 @@ const slide1 = [
 const slide2 = [
   "https://ik.imagekit.io/0xcqzy/good-food/Burrata%20and%20Fruits.jpg?updatedAt=1738332183331",
   "https://ik.imagekit.io/0xcqzy/good-food/African%20Sweet%20Potato%20Soup.jpg?updatedAt=1738333058408",
+  "https://ik.imagekit.io/0xcqzy/good-food/Red%20caviar%20meal%20in%20the%20whit....jpg?updatedAt=1738332499086",
   "https://ik.imagekit.io/0xcqzy/good-food/Brunch%20is%20this%20moment%20when%20....jpg?updatedAt=1738333055934",
   "https://ik.imagekit.io/0xcqzy/good-food/a%20plate%20of%20dessert.jpg?updatedAt=1736521390124",
 ];
@@ -26,10 +27,11 @@ const slide3 = [
   "https://ik.imagekit.io/0xcqzy/good-food/Photograph%20of%20sea%20bass%20dish....jpg?updatedAt=1738333046172",
   "https://ik.imagekit.io/0xcqzy/good-food/a%20bowl%20of%20food%20with%20peas%20on....jpg?updatedAt=1736521393773",
 ];
-export default function Dishes() {
+export default function DishSlides() {
   return (
-    <div className="px-5">
+    <div className="px-5 ">
       <Splide
+        className="pt-5"
         options={{
           type: "loop",
           perPage: 3,

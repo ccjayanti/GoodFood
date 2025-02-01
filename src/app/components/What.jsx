@@ -1,7 +1,15 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import Dishes from "./Dishes";
+import DishSlides from "./DishSlides";
+import ThumbnailCarousel from "./ThumbnailCarousel";
 
 export default function What() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="relative text-sage mt-5" id="what">
       <div className="px-5 py-5">
@@ -45,9 +53,31 @@ export default function What() {
           className="object-cover"
         />
       </div>
+      <div className="px-5 p-7 mb-5">
+        <div className="uppercase  text-xs py-5">
+          A Culinary Experience, Just for You
+        </div>
+        <div className="font-regular text-xl">
+          Discover a menu crafted with passion, precision, and the finest
+          ingredients. Our private chef brings a personalized touch to every
+          dish, ensuring a unique and unforgettable dining experience.Whether
+          you crave comforting classics or innovative gourmet delights, every
+          dish is made with passion and precision to bring restaurant-quality
+          meals straight to your table.
+        </div>
+      </div>
+      <DishSlides></DishSlides>
+      <div className=" text-ivory text-center p-5">
+        <button
+          onClick={handleClick}
+          className="uppercase text-xs  bg-transparentBg p-2 rounded-full"
+        >
+          click to expand
+        </button>
+      </div>
       <div className="relative py-7">
         <div className="text-xs uppercase px-5 mt-7">Seamless Service</div>
-        <div className="font-regular px-5 mt-2 text-xl">
+        <div className="font-regular px-5 mt-5 text-xl">
           Our goal is to make your event effortless and enjoyable. From sourcing
           fresh, high-quality ingredients to delivering flawless table service,
           we handle every aspect so you can focus on your guests.We accommodate
@@ -67,7 +97,23 @@ export default function What() {
           />
         </div>
       </div>
-      <Dishes></Dishes>
+
+      {/* Expanded Menu view */}
+      {isExpanded && (
+        <div className="fixed inset-0 bg-chocLight " style={{ zIndex: 9999 }}>
+          <div className="text-ivory text-lg p-5">
+            <div className="flex justify-end">
+              <button
+                className="uppercase text-xs  bg-transparentBg p-3 rounded-full "
+                onClick={handleClick}
+              >
+                Close
+              </button>
+            </div>
+            <ThumbnailCarousel></ThumbnailCarousel>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
