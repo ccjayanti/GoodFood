@@ -32,7 +32,9 @@ a {
   text-decoration: none;
 }
 
-html.lenis, html.lenis body {
+/* lenis ---------------------------------------------- */
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -50,4 +52,25 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* splide --------------------------------------------- */
+@layer components {
+
+  /* Apply opacity to the splide__slide elements inside custom-carousel */
+  .custom-carousel .splide__slide {
+    @apply opacity-50;
+  }
+
+  /* Apply opacity 100 to the active splide__slide elements inside custom-carousel */
+  .custom-carousel .splide__slide.is-active {
+    @apply opacity-100;
+  }
+}
+
+/* Remove default border */
+.custom-carousel .splide__slide.is-active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }

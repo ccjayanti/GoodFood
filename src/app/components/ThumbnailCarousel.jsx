@@ -53,34 +53,35 @@ export default function ThumbnailCarousel() {
       </Splide>
 
       {/* ✅ Thumbnail Carousel */}
-
-      <Splide
-        className="p-5"
-        ref={thumbRef}
-        options={{
-          fixedWidth: 100,
-          fixedHeight: 60,
-          isNavigation: true,
-          gap: "0.5rem",
-          focus: "center",
-          pagination: false,
-          cover: true,
-          arrows: true,
-        }}
-        onMounted={(splide) => {
-          mainRef.current.sync(splide);
-        }}
-      >
-        {images.map((image, index) => (
-          <SplideSlide key={index} className="cursor-pointer">
-            <img
-              src={image}
-              alt={`Thumbnail ${index}`}
-              className="w-full h-auto rounded-lg"
-            />
-          </SplideSlide>
-        ))}
-      </Splide>
+      <div className="custom-carousel">
+        <Splide
+          className="p-5"
+          ref={thumbRef}
+          options={{
+            fixedWidth: 100,
+            fixedHeight: 60,
+            isNavigation: true,
+            gap: "0.5rem",
+            focus: "center",
+            pagination: false,
+            cover: true,
+            arrows: true,
+          }}
+          onMounted={(splide) => {
+            mainRef.current.sync(splide);
+          }}
+        >
+          {images.map((image, index) => (
+            <SplideSlide key={index} className="cursor-pointer splide__slide">
+              <img
+                src={image}
+                alt={`Thumbnail ${index}`}
+                className="w-full h-auto rounded-lg"
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </div>
   );
 }
