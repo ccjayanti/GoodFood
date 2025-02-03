@@ -1,6 +1,8 @@
-import Head from 'next/head'; // Import Head for adding custom head elements
+import Head from "next/head"; // Import Head for adding custom head elements
 import localFont from "next/font/local";
 import "./globals.css";
+import { CursorProvider } from "./context/CursorContext";
+import CustomCursor from "./components/CustomCursor";
 
 const oranienbaum = localFont({
   src: "./fonts/Oranienbaum-Regular.woff",
@@ -39,7 +41,10 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={`${oranienbaum.variable} ${playfairDisplay.variable}`}>
-        {children}
+        <CursorProvider>
+          <CustomCursor />
+          {children}
+        </CursorProvider>
       </body>
     </html>
   );
