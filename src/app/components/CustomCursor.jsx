@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useCursor } from "../context/CursorContext";
@@ -46,7 +45,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none mix-blend-difference z-50 transition-colors duration-300 bg-sepia"
+      className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none  z-50 "
       style={{ backgroundColor: cursorColor }}
     />
   );

@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { useCursor } from "../context/CursorContext";
 
 export default function Why() {
+  const { setCursorColor } = useCursor();
   return (
-    <div className="relative text-clay mt-5" id="why">
+    <div
+      /*Custom Cursor follower Color */
+      onMouseEnter={() => setCursorColor("var(--clay)")}
+      onMouseLeave={() => setCursorColor("var(--clay)")}
+      className="relative text-clay mt-5"
+      id="why"
+    >
       <div className="h-[60vh] w-full relative ">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Chopping%20Vegetables.jpg?updatedAt=1736521956162"

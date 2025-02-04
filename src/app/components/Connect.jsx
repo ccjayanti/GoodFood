@@ -1,6 +1,14 @@
+import { useCursor } from "../context/CursorContext";
 export default function Connect() {
+  const { setCursorColor } = useCursor();
   return (
-    <div className="relative text-sand mt-5 px-5 py-5" id="connect">
+    <div
+      /*Custom Cursor follower Color */
+      onMouseEnter={() => setCursorColor("var(--sand)")}
+      onMouseLeave={() => setCursorColor("var(--sand)")}
+      className="relative text-sand mt-5 px-5 py-5"
+      id="connect"
+    >
       <div className="">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>

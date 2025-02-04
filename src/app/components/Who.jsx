@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { useCursor } from "../context/CursorContext";
 
 export default function Who() {
+  const { setCursorColor } = useCursor();
   return (
-    <div className="relative text-mist " id="who">
+    <div
+      /*Custom Cursor follower Color */
+      onMouseEnter={() => setCursorColor("var(--mist)")}
+      onMouseLeave={() => setCursorColor("var(--mist)")}
+      className="relative text-mist "
+      id="who"
+    >
       <div className="px-5 py-5">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>
