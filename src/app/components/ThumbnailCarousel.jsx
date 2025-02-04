@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-
+import Image from "next/image";
 const images = [
   "https://ik.imagekit.io/0xcqzy/good-food/a%20blue%20plate%20topped%20with%20fo....jpg?updatedAt=1738333052246",
   "https://ik.imagekit.io/0xcqzy/good-food/A%20bowl%20of%20soup%20on%20a%20wooden%20....jpg?updatedAt=1736519728727",
@@ -40,11 +40,12 @@ export default function ThumbnailCarousel() {
         {images.map((image, index) => (
           <SplideSlide key={index}>
             <div className="w-full flex justify-center ">
-              <div className=" h-[400px] w-[600px]">
-                <img
+              <div className="relative h-[400px] w-[600px]">
+                <Image
                   src={image}
                   alt={`Slide ${index}`}
-                  className="w-full h-full object-cover"
+                  layout="fill"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -73,9 +74,10 @@ export default function ThumbnailCarousel() {
         >
           {images.map((image, index) => (
             <SplideSlide key={index} className="cursor-pointer splide__slide">
-              <img
+              <Image
                 src={image}
                 alt={`Thumbnail ${index}`}
+                layout="fill"
                 className="w-full h-auto rounded-lg"
               />
             </SplideSlide>
