@@ -8,10 +8,10 @@ export default function Why() {
       /*Custom Cursor follower Color */
       onMouseEnter={() => setCursorColor("var(--clay)")}
       onMouseLeave={() => setCursorColor("var(--clay)")}
-      className="relative text-clay mt-5"
+      className="relative text-clay mt-5 lg:mt-0 lg:flex lg:h-[100vh] "
       id="why"
     >
-      <div className="h-[60vh] w-full relative ">
+      <div className="h-[60vh] w-full relative lg:h-[100vh] lg:w-[100vw] ">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Chopping%20Vegetables.jpg?updatedAt=1736521956162"
           alt="food image"
@@ -19,23 +19,27 @@ export default function Why() {
           className="object-cover"
         />
       </div>
-      <div className="px-5 py-5">
+      <div className="px-5 py-5 lg:ml-14">
         <div className="flex justify-between relative mt-3 uppercase text-xs">
           <div>chapter</div>
           <div>001</div>
           <div>one</div>
         </div>
-        <div className="text-9xl font-regular uppercase w-full text-center py-6">
+        <div className="text-9xl font-regular uppercase w-full text-center py-6 ">
           WHY
         </div>
-        <div className="uppercase  text-xs py-5">
-          Tailored Culinary Experience
-        </div>
-        <div className="font-regular text-xl">
-          We craft every meal to suit your{" "}
-          <span className="font-italic">taste preferences, dietary needs,</span>{" "}
-          and <span className="font-italic">event style</span> ensuring a dining
-          experience that feels uniquely yours.
+        <div className="lg:absolute lg:w-80 lg:z-10 lg:ml-14">
+          <div className="uppercase  text-xs py-5">
+            Tailored Culinary Experience
+          </div>
+          <div className="font-regular text-xl ">
+            We craft every meal to suit your{" "}
+            <span className="font-italic">
+              taste preferences, dietary needs,
+            </span>{" "}
+            and <span className="font-italic">event style</span> ensuring a
+            dining experience that feels uniquely yours.
+          </div>
         </div>
       </div>
       <div className="m-9 bg-clay">
@@ -48,7 +52,7 @@ export default function Why() {
           />
         </div>
       </div>
-      <div className="relative h-[80vh]">
+      <div className="relative h-[30vh]  ">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/why/Papaya%20and%20blueberries%20salad.jpg?updatedAt=1736522097544"
           alt="food image"
@@ -60,7 +64,7 @@ export default function Why() {
         <div className="text-xs uppercase px-5 mt-7">
           Commitment to Excellence
         </div>
-        <div className="font-regular px-5 mt-2 text-xl">
+        <div className="font-regular px-5 mt-2 text-xl ">
           At Goodfood we pride ourselves on delivering not just food, but an{" "}
           <span className="font-italic">unforgettable experience</span> with
           touch of{" "}
@@ -70,7 +74,7 @@ export default function Why() {
         </div>
       </div>
       <div className="m-9 bg-clay">
-        <div className="h-60 w-full relative">
+        <div className="h-60 w-full relative lg:absolute lg:left-[35vw] lg:bottom-10 lg:w-[27vw] lg:h-[40vh]">
           <Image
             src="https://ik.imagekit.io/0xcqzy/good-food/why/a%20white%20plate%20topped%20with%20f....jpg?updatedAt=1736522166661"
             alt="food image"
@@ -79,7 +83,7 @@ export default function Why() {
           />
         </div>
       </div>
-      <div className="h-[80vh] w-full relative ">
+      <div className="h-[80vh] w-full relative lg:absolute lg:right-40 lg:bottom-10 lg:w-[40vw] lg:h-[60vh]">
         <Image
           src="https://ik.imagekit.io/0xcqzy/good-food/Delicious%20tomato%20nectarine%20....jpg?updatedAt=1736521058440"
           alt="food image"

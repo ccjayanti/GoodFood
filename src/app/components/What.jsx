@@ -16,7 +16,7 @@ export default function What() {
       /*Custom Cursor follower Color */
       onMouseEnter={() => setCursorColor("var(--sage)")}
       onMouseLeave={() => setCursorColor("var(--sage)")}
-      className="relative text-sage mt-5"
+      className="relative text-sage mt-5 lg:h-[100vh] lg:flex lg:ml-20 lg:mt-0"
       id="what"
     >
       <div className="px-5 py-5">
@@ -28,22 +28,24 @@ export default function What() {
         <div className="text-9xl font-regular uppercase w-full text-center py-6">
           what
         </div>
-        <div className="uppercase  text-xs py-5">
-          Curated Culinary Experiences
-        </div>
-        <div className="font-regular text-xl">
-          We specialize in crafting{" "}
-          <span className="font-italic">personalized dining</span> experiences
-          that cater to your tastes, preferences, and occasions. From intimate
-          dinners to grand celebrations, we ensure every detail is meticulously
-          planned and executed.Transform your dining room into a{" "}
-          <span className="font-italic">fine dining</span> experience. With
-          professional-grade skills and attention to detail, we bring the
-          sophistication of a top-tier restaurant directly to your home.
+        <div className="lg:w-[40vw]">
+          <div className="uppercase  text-xs py-5">
+            Curated Culinary Experiences
+          </div>
+          <div className="font-regular text-xl">
+            We specialize in crafting{" "}
+            <span className="font-italic">personalized dining</span> experiences
+            that cater to your tastes, preferences, and occasions. From intimate
+            dinners to grand celebrations, we ensure every detail is
+            meticulously planned and executed.Transform your dining room into a{" "}
+            <span className="font-italic">fine dining</span> experience. With
+            professional-grade skills and attention to detail, we bring the
+            sophistication of a top-tier restaurant directly to your home.
+          </div>
         </div>
       </div>
-      <div className="m-9 bg-sage">
-        <div className="h-60 w-full relative">
+      <div className="m-9 bg-sage lg:h-[20vh] lg:absolute lg:bottom-0 lg:left-80 lg:m-0">
+        <div className="h-60 w-full relative lg:w-[20vw] ">
           <Image
             src="https://ik.imagekit.io/0xcqzy/good-food/Tasty%20starter%20getting%20prepa....jpg?updatedAt=1737129981176"
             alt="food image"
@@ -52,16 +54,18 @@ export default function What() {
           />
         </div>
       </div>
-      <div className="relative h-[80vh]">
-        <Image
-          src="https://ik.imagekit.io/0xcqzy/good-food/flat%20lay%20photo%20of%20green%20cau....jpg?updatedAt=1737135059293"
-          alt="food image"
-          fill
-          className="object-cover"
-        />
+      <div>
+        <div className="relative h-[80vh] lg:h-[100vh] lg:w-[40vw] ">
+          <Image
+            src="https://ik.imagekit.io/0xcqzy/good-food/flat%20lay%20photo%20of%20green%20cau....jpg?updatedAt=1737135059293"
+            alt="food image"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
-      <div className="px-5 p-7 mb-5">
-        <div className="uppercase  text-xs py-5">
+      <div className="px-5 p-7 mb-5 ">
+        <div className="uppercase  text-xs py-5 lg:w-[30vw]">
           A Culinary Experience, Just for You
         </div>
         <div className="font-regular text-xl">
@@ -73,7 +77,7 @@ export default function What() {
           meals straight to your table.
         </div>
       </div>
-      <DishSlides></DishSlides>
+      <DishSlides/>
       <div className=" text-ivory text-center p-5">
         <button
           onClick={handleClick}

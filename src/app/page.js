@@ -22,12 +22,15 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <Nav></Nav>
+      {/* <Nav></Nav> */}
+     
+      <div className="lg:flex">
       <Hero></Hero>
       <Why></Why>
       <Who></Who>
       <What></What>
       <Connect></Connect>
+      </div>
     </div>
   );
 }

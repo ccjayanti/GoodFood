@@ -27,95 +27,95 @@ const slide3 = [
   "https://ik.imagekit.io/0xcqzy/good-food/Photograph%20of%20sea%20bass%20dish....jpg?updatedAt=1738333046172",
   "https://ik.imagekit.io/0xcqzy/good-food/a%20bowl%20of%20food%20with%20peas%20on....jpg?updatedAt=1736521393773",
 ];
+
 export default function DishSlides() {
+  const slidesArray = [slide1, slide2, slide3];
+
   return (
-    <div className="px-5 ">
-      <Splide
-        className="pt-5"
-        options={{
-          type: "loop",
-          perPage: 3,
-          gap: "1rem",
-          arrows: false, // ✅ Hides arrows
-          pagination: false, // ✅ Hides dots
-          autoScroll: {
-            speed: 1,
-            pauseOnHover: false,
-          },
-        }}
-        extensions={{ AutoScroll }}
-      >
-        {slide1.map((src, index) => (
-          <SplideSlide key={index}>
-            <div className="h-[100px] w-[20px]">
-              <Image
-                src={src}
-                alt={`Food image ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </SplideSlide>
-        ))}
-      </Splide>
+    <div className="px-5 lg:flex lg:h-screen lg:w-full ">
+      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
+        <Splide
+          className="pt-5 lg:pt-0"
+          options={{
+            type: "loop",
+            direction: "ttb",
+            height: "100vh",
+            perPage: 3,
+            gap: "1rem",
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+              speed: 1,
+              pauseOnHover: false,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {slide1.map((src, index) => (
+            <SplideSlide key={index}>
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
+                <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+      
+      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
+        <Splide
+          className="pt-5 lg:pt-0 lg:pl-5"
+          options={{
+            type: "loop",
+            direction: "ttb",
+            height: "100vh",
+            perPage: 3,
+            gap: "1rem",
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+              speed: -1,
+              pauseOnHover: false,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {slide2.map((src, index) => (
+            <SplideSlide key={index}>
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
+                <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
 
-      <Splide
-        className="pt-5"
-        options={{
-          type: "loop",
-          perPage: 3,
-          gap: "1rem",
-          arrows: false, // ✅ Hides arrows
-          pagination: false, // ✅ Hides dots
-          autoScroll: {
-            speed: -1,
-            pauseOnHover: false,
-          },
-        }}
-        extensions={{ AutoScroll }}
-      >
-        {slide2.map((src, index) => (
-          <SplideSlide key={index}>
-            <div className="h-[100px] w-[20px]">
-              <Image
-                src={src}
-                alt={`Food image ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </SplideSlide>
-        ))}
-      </Splide>
-
-      <Splide
-        className="pt-5"
-        options={{
-          type: "loop",
-          perPage: 3,
-          gap: "1rem",
-          arrows: false, // ✅ Hides arrows
-          pagination: false, // ✅ Hides dots
-          autoScroll: {
-            speed: 1,
-            pauseOnHover: false,
-          },
-        }}
-        extensions={{ AutoScroll }}
-      >
-        {slide3.map((src, index) => (
-          <SplideSlide key={index}>
-            <div className="h-[100px] w-[20px]">
-              <Image
-                src={src}
-                alt={`Food image ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </SplideSlide>
-        ))}
-      </Splide>
+      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
+        <Splide
+          className="pt-5 lg:pt-0 lg:pl-5"
+          options={{
+            type: "loop",
+            direction: "ttb",
+            height: "100vh",
+            perPage: 3,
+            gap: "1rem",
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+              speed: 1,
+              pauseOnHover: false,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {slide3.map((src, index) => (
+            <SplideSlide key={index}>
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
+                <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </div>
   );
 }
