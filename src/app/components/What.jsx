@@ -25,7 +25,7 @@ export default function What() {
           <div>003</div>
           <div>three</div>
         </div>
-        <div className="text-9xl font-regular uppercase w-full text-center py-6">
+        <div className="text-9xl font-regular uppercase w-full text-center py-6 ">
           what
         </div>
         <div className="lg:w-[40vw]">
@@ -44,28 +44,30 @@ export default function What() {
           </div>
         </div>
       </div>
-      <div className="m-9 bg-sage lg:h-[20vh] lg:absolute lg:bottom-0 lg:left-80 lg:m-0">
-        <div className="h-60 w-full relative lg:w-[20vw] ">
-          <Image
-            src="https://ik.imagekit.io/0xcqzy/good-food/Tasty%20starter%20getting%20prepa....jpg?updatedAt=1737129981176"
-            alt="food image"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
       <div>
-        <div className="relative h-[80vh] lg:h-[100vh] lg:w-[40vw] ">
-          <Image
-            src="https://ik.imagekit.io/0xcqzy/good-food/flat%20lay%20photo%20of%20green%20cau....jpg?updatedAt=1737135059293"
-            alt="food image"
-            fill
-            className="object-cover"
-          />
+        <div className="m-9 bg-sage lg:h-[30vh] lg:w-[30vw] lg:absolute lg:p-10 lg:bottom-20 lg:m-0">
+          <div className="h-60 w-full relative  lg:h-[30vh] ">
+            <Image
+              src="https://ik.imagekit.io/0xcqzy/good-food/Tasty%20starter%20getting%20prepa....jpg?updatedAt=1737129981176"
+              alt="food image"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <div>
+          <div className="relative h-[80vh] lg:h-[40vh] lg:mt-5">
+            <Image
+              src="https://ik.imagekit.io/0xcqzy/good-food/flat%20lay%20photo%20of%20green%20cau....jpg?updatedAt=1737135059293"
+              alt="food image"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
-      <div className="px-5 p-7 mb-5 ">
-        <div className="uppercase  text-xs py-5 lg:w-[30vw]">
+      <div className="px-5 p-7 mb-5  lg:w-[30vw] lg:bg-sage lg:text-ivory lg:mb-0 lg:mr-5 ">
+        <div className="uppercase  text-xs py-5 lg:w-[30vw] ">
           A Culinary Experience, Just for You
         </div>
         <div className="font-regular text-xl">
@@ -77,35 +79,40 @@ export default function What() {
           meals straight to your table.
         </div>
       </div>
-      <DishSlides/>
-      <div className=" text-ivory text-center p-5">
-        <button
-          onClick={handleClick}
-          className="uppercase text-xs  bg-transparentBg p-2 rounded-full"
-        >
-          click to expand
-        </button>
-      </div>
-      <div className="relative py-7">
-        <div className="text-xs uppercase px-5 mt-7">Seamless Service</div>
-        <div className="font-regular px-5 mt-5 text-xl">
-          Our goal is to make your event effortless and enjoyable. From sourcing
-          fresh, high-quality ingredients to delivering flawless table service,
-          we handle every aspect so you can focus on your guests.We accommodate
-          a variety of dietary preferences and requirements, including{" "}
-          <span className="font-italic">vegetarian, vegan, gluten-free</span>{" "}
-          and other specialized diets, ensuring that everyone at your table is
-          satisfied.
+      <div className="lg:flex">
+        <DishSlides />
+        <div className=" text-ivory text-center p-5 lg:flex align-middle">
+          <button
+            onClick={handleClick}
+            className="uppercase text-xs  bg-transparentBg p-2 rounded-full lg:bg-sage "
+          >
+            click to expand
+          </button>
         </div>
       </div>
-      <div className="m-9 bg-sage">
-        <div className="h-60 w-full relative">
-          <Image
-            src="https://ik.imagekit.io/0xcqzy/good-food/Matcha%20Swiss%20Roll.jpg?updatedAt=1736521388656"
-            alt="food image"
-            fill
-            className="object-cover"
-          />
+      <div className="lg:flex">
+        <div className="relative py-7  lg:w-[30vw]">
+          <div className="text-xs uppercase px-5 mt-7">Seamless Service</div>
+          <div className="font-regular px-5 mt-5 text-xl">
+            Our goal is to make your event effortless and enjoyable. From
+            sourcing fresh, high-quality ingredients to delivering flawless
+            table service, we handle every aspect so you can focus on your
+            guests.We accommodate a variety of dietary preferences and
+            requirements, including{" "}
+            <span className="font-italic">vegetarian, vegan, gluten-free</span>{" "}
+            and other specialized diets, ensuring that everyone at your table is
+            satisfied.
+          </div>
+        </div>
+        <div className="m-9 bg-sage">
+          <div className="h-60 w-full relative">
+            <Image
+              src="https://ik.imagekit.io/0xcqzy/good-food/Matcha%20Swiss%20Roll.jpg?updatedAt=1736521388656"
+              alt="food image"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 

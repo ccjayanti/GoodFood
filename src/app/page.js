@@ -24,7 +24,7 @@ export default function Home() {
     <div>
       {/* <Nav></Nav> */}
      
-      <div className="lg:flex">
+      <div className="lg:flex lg:overflow-y-hidden">
       <Hero></Hero>
       <Why></Why>
       <Who></Who>

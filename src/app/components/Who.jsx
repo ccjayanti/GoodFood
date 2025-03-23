@@ -11,9 +11,9 @@ export default function Who() {
       className="relative text-mist lg:flex lg:gap-10 lg:h-[100vh] "
       id="who"
     >
-      <div className="px-5 py-5 lg:w-[20vw]">
-        <div className="lg:absolute lg:left-0 lg:bottom-0">
-          <div className="flex justify-between relative mt-3 uppercase text-xs">
+       <div className="lg:flex lg:flex-col lg:justify-around h-full align-middle lg:w-[30vw]">
+        <div >
+          <div className="flex justify-between relative mt-3 uppercase text-xs lg:mt-5">
             <div>chapter</div>
             <div>002</div>
             <div>two</div>
@@ -22,7 +22,7 @@ export default function Who() {
             WHo
           </div>
         </div>
-        <div className="lg:absolute lg:left-0 lg:top-2 lg:w-[27vw]">
+        <div >
           <div className="uppercase  text-xs py-5">
             a passionate Culinary service
           </div>
