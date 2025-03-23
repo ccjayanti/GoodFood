@@ -29,17 +29,14 @@ const slide3 = [
 ];
 
 export default function DishSlides() {
-  const slidesArray = [slide1, slide2, slide3];
-
   return (
-    <div className="px-5 lg:flex lg:h-screen lg:w-full ">
-      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
+    <div className="px-5 lg:flex lg:h-screen lg:w-full">
+      <div className="relative mx-auto w-full lg:w-[10vw] lg:h-screen lg:flex lg:flex-col lg:justify-start">
         <Splide
           className="pt-5 lg:pt-0"
           options={{
             type: "loop",
-            direction: "ttb",
-            height: "100vh",
+            direction: "rtl",
             perPage: 3,
             gap: "1rem",
             arrows: false,
@@ -48,12 +45,15 @@ export default function DishSlides() {
               speed: 1,
               pauseOnHover: false,
             },
+            ...(typeof window !== "undefined" && window.innerWidth >= 1024
+              ? { direction: "ttb", height: "100vh",perPage: 4 }
+              : {}),
           }}
           extensions={{ AutoScroll }}
         >
           {slide1.map((src, index) => (
             <SplideSlide key={index}>
-              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-screen">
                 <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
               </div>
             </SplideSlide>
@@ -61,41 +61,12 @@ export default function DishSlides() {
         </Splide>
       </div>
       
-      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
+      <div className="relative mx-auto w-full lg:w-[10vw] lg:h-screen lg:flex lg:flex-col lg:justify-end lg:ml-5">
         <Splide
-          className="pt-5 lg:pt-0 lg:pl-5"
+          className="pt-5 lg:pt-0 "
           options={{
             type: "loop",
-            direction: "ttb",
-            height: "100vh",
-            perPage: 3,
-            gap: "1rem",
-            arrows: false,
-            pagination: false,
-            autoScroll: {
-              speed: -1,
-              pauseOnHover: false,
-            },
-          }}
-          extensions={{ AutoScroll }}
-        >
-          {slide2.map((src, index) => (
-            <SplideSlide key={index}>
-              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
-                <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
-              </div>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-
-      <div className="relative lg:w-[20vw] lg:h-screen mx-auto">
-        <Splide
-          className="pt-5 lg:pt-0 lg:pl-5"
-          options={{
-            type: "loop",
-            direction: "ttb",
-            height: "100vh",
+            direction: "ltr",
             perPage: 3,
             gap: "1rem",
             arrows: false,
@@ -104,12 +75,46 @@ export default function DishSlides() {
               speed: 1,
               pauseOnHover: false,
             },
+            ...(typeof window !== "undefined" && window.innerWidth >= 1024
+              ? { direction: "ttb", height: "100vh" ,perPage: 4, autoScroll: { speed: -1, pauseOnHover: false, }  }
+              : {}),
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {slide2.map((src, index) => (
+            <SplideSlide key={index}>
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-screen">
+                <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+
+      <div className="relative mx-auto w-full lg:w-[10vw] lg:h-screen lg:flex lg:flex-col lg:justify-start lg:ml-5">
+        <Splide
+          className="pt-5 lg:pt-0 "
+          options={{
+            type: "loop",
+            direction: "rtl",
+            
+            perPage: 3,
+            gap: "1rem",
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+              speed: 1,
+              pauseOnHover: false,
+            },
+            ...(typeof window !== "undefined" && window.innerWidth >= 1024
+              ? { direction: "ttb", height: "100vh",perPage: 4, }
+              : {}),
           }}
           extensions={{ AutoScroll }}
         >
           {slide3.map((src, index) => (
             <SplideSlide key={index}>
-              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-[100vh]">
+              <div className="h-[100px] w-[70px] lg:w-[20vw] lg:h-screen">
                 <Image src={src} alt={`Food image ${index + 1}`} fill className="object-cover" />
               </div>
             </SplideSlide>
