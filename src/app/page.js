@@ -21,15 +21,15 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <div>
+    <div className="lg:flex lg:relative ">
       {/* <Nav></Nav> */}
-     
+
       <div className="lg:flex lg:overflow-y-hidden">
-      <Hero></Hero>
-      <Why></Why>
-      <Who></Who>
-      <What></What>
-      <Connect></Connect>
+        <Hero></Hero>
+        <Why></Why>
+        <Who></Who>
+        <What></What>
+        <Connect></Connect>
       </div>
     </div>
   );
