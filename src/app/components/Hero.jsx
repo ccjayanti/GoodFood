@@ -5,9 +5,11 @@ import { useCursor } from "../context/CursorContext";
 
 //images for hero section
 const images = [
-  "https://ik.imagekit.io/0xcqzy/good-food/Ora%20King%20Salmon%20-%20dinner%20pl....jpg?updatedAt=1731841913791",
+  // "https://ik.imagekit.io/0xcqzy/good-food/Ora%20King%20Salmon%20-%20dinner%20pl....jpg?updatedAt=1731841913791",
   "https://ik.imagekit.io/0xcqzy/good-food/%EB%B3%B5%EC%88%AD%EC%95%84%20%EB%94%94%EC%A0%80%ED%8A%B8.jpg?updatedAt=1731860829500",
-  "https://ik.imagekit.io/0xcqzy/good-food/a%20bowl%20of%20food%20with%20a%20garni....jpg?updatedAt=1731861052594",
+  // "https://ik.imagekit.io/0xcqzy/good-food/a%20bowl%20of%20food%20with%20a%20garni....jpg?updatedAt=1731861052594",
+  "https://ik.imagekit.io/0xcqzy/good-food/egg%20with%20sliced%20tomato%20and%20....jpg?updatedAt=1738333052180",
+  "https://ik.imagekit.io/0xcqzy/good-food/Slice%20of%20fruit%20pie.jpg?updatedAt=1738333052015",
 ];
 
 export default function Hero() {
