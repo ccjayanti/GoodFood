@@ -29,7 +29,7 @@ export default function Nav() {
       >
         menu
       </button>
-      <button className="bg-transparentBg text-ivory p-3 rounded-full uppercase">
+      <button className="bg-transparentBg text-ivory p-3 rounded-full uppercase ">
         <Link
           to="connect"
           smooth={true}
@@ -47,7 +47,7 @@ export default function Nav() {
           onClick={toggleMenu} // Close the menu when clicking outside
         >
           <div
-            className="uppercase"
+            className="uppercase cursor-pointer"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu
           >
             <ul className="flex flex-wrap justify-center items-center w-full h-full space-y-4 lg:space-y-0 lg:space-x-4">

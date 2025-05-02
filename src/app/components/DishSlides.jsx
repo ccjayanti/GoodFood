@@ -34,13 +34,18 @@ export default function DishSlides() {
         className="pt-5"
         options={{
           type: "loop",
-          perPage: 3,
+          perPage: 5,
           gap: "1rem",
           arrows: false, // ✅ Hides arrows
           pagination: false, // ✅ Hides dots
           autoScroll: {
             speed: 1,
             pauseOnHover: false,
+          },
+          breakpoints: {
+            1024: {
+              perPage: 3, // for screens <= 1024px (like tablets/small laptops)
+            },
           },
         }}
         extensions={{ AutoScroll }}
@@ -63,13 +68,18 @@ export default function DishSlides() {
         className="pt-5"
         options={{
           type: "loop",
-          perPage: 3,
+          perPage: 5,
           gap: "1rem",
           arrows: false, // ✅ Hides arrows
           pagination: false, // ✅ Hides dots
           autoScroll: {
             speed: -1,
             pauseOnHover: false,
+          },
+          breakpoints: {
+            1024: {
+              perPage: 3, // for screens <= 1024px (like tablets/small laptops)
+            },
           },
         }}
         extensions={{ AutoScroll }}
@@ -92,13 +102,18 @@ export default function DishSlides() {
         className="pt-5"
         options={{
           type: "loop",
-          perPage: 3,
+          perPage: 5,
           gap: "1rem",
           arrows: false, // ✅ Hides arrows
           pagination: false, // ✅ Hides dots
           autoScroll: {
             speed: 1,
             pauseOnHover: false,
+          },
+          breakpoints: {
+            1024: {
+              perPage: 3, 
+            },
           },
         }}
         extensions={{ AutoScroll }}
