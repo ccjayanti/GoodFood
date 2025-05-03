@@ -51,7 +51,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none  z-50 "
+      className="fixed -top-5 -left-5 w-4 h-4 rounded-full pointer-events-none  z-50 "
       style={{ backgroundColor: cursorColor }}
     />
   );
